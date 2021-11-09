@@ -1,0 +1,22 @@
+.App { 
+  width: 0 auto;
+  display: grid;
+
+ grid-template-areas:
+"h h"
+"n c";
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 2fr 10fr;
+  grid-gap: 10px;
+}
+
+.App-wrapper {
+    background-color: chartreuse;
+    grid-area: c;
+}
+
+.App-wrapper img {
+  width: 1000px;
+  }
+/* https://www.sitepoint.com/wp-content/uploads/2010/04/wwf_logo1.jpg' */
+
