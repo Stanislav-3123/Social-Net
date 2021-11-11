@@ -19,9 +19,9 @@ const App = (props) => {
                 <Routes>
                    <Route path="/content" element={<Content />} />
                    <Route path="/dialogs" element={<Dialogs />} />
-                   <Route path="/dialogs" element={<Music />} />
-                   <Route path="/dialogs" element={<News />} />
-                   <Route path="/dialogs" element={<Settings />} />
+                   <Route path="/music" element={<Music />} />
+                   <Route path="/news" element={<News />} />
+                   <Route path="/settings" element={<Settings />} />
                 </Routes>
             </div>
         </div>
