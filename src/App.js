@@ -1,10 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
 import Content from './components/Content/Content';
 import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
 import Dialogs from './components/Dialogs/Dialogs';
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Music from './components/Music/Music';
 import News from './components/News/News';
 import Settings from './components/Settings/Settings';

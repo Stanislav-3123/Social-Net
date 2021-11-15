@@ -4,12 +4,13 @@
     padding: 20px;
 }
 
-
 .item a {
-    text-decoration: none;
     color: white;
+    text-decoration: none;
+    
 } 
 
-.item a.activeLink {
+.item a.active {
     color: brown;
 }
+
