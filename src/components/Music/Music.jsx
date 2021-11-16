@@ -8,7 +8,7 @@ const Music = (props) => {
 
         <div className={s.item}>
             <div>
-                Albums
+                Best Albums 
             </div>
             <div>
                 Music list
