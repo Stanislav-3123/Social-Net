@@ -11,8 +11,9 @@
 }
 
 .App-wrapper {
-    background-color: rgb(82, 122, 42);
-    grid-area: c;
+  background: rgb(2,0,36);
+background: linear-gradient(324deg, rgba(2,0,36,1) 0%, rgba(54,69,24,1) 37%, rgba(0,212,255,1) 88%);
+  grid-area: c;
 }
 
 .App-wrapper img {

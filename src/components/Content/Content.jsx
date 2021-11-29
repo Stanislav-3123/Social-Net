@@ -17,15 +17,16 @@ const Content = () => {
             <div className={s.item}>
                 My Posts
             </div>
-            <div>
-                <textarea></textarea>
+            <div className={s.item}>
+                <div>
+                    <textarea></textarea>
+                </div>
                 <button>Add post</button>
             </div>
-            <div>
+            <div className={s.item}>
                 <Post message="Hello, how are you?" likecounts=" 10" />
                 <Post message="It`s my first post" likecounts=" 15" />
             </div>
-
         </div>
     );
 }
