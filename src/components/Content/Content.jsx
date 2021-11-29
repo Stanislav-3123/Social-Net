@@ -8,7 +8,9 @@ const Content = () => {
     return (
 
         <div>
-            <img src='https://i.ucrazy.ru/files/i/2007.6.22/polar_ice.jpg'></img>
+            <div className={s.mainImg}>
+                <img src='https://n1s2.hsmedia.ru/60/b5/cc/60b5cc5266a98b966e2f35c57ed388c8/690x380_0x0a330c2a_12567029551616070388.jpeg'></img>
+            </div>
             <div className={s.item}>
                 Ava + description
             </div>

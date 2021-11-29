@@ -11,12 +11,12 @@
 }
 
 .App-wrapper {
-    background-color: chartreuse;
+    background-color: rgb(82, 122, 42);
     grid-area: c;
 }
 
 .App-wrapper img {
   width: 1000px;
   }
-/* https://www.sitepoint.com/wp-content/uploads/2010/04/wwf_logo1.jpg' */
+
 
