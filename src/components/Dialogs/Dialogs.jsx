@@ -32,7 +32,7 @@ const Dialogs = (props) => {
             </div>
             <div className={s.messages}>
                 <div className={s.message}>
-                    Hi
+                    Hi, nice to meet you!
                 </div>
                 <div className={s.message}>
                     How are you?
