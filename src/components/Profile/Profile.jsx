@@ -1,11 +1,11 @@
 import React from 'react';
-import s from './Content.module.css';
+import s from './Profile.module.css';
 import MyPosts from './MyPosts/MyPosts';
 import ProfileInfo from './ProfileInfo/ProfileInfo';
 
 
 
-const Content = () => {
+const Profile = () => {
     return (
         <div>
             <ProfileInfo />
@@ -15,4 +15,4 @@ const Content = () => {
 }
 
 
-export default Content;
+export default Profile;

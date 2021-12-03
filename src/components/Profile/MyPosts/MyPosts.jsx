@@ -11,7 +11,7 @@ const MyPosts = (props) => {
     ]
 
     let myPostsElements = PostData
-    .map ( post =>  <Post message={post.post} likecounts={post.likecounts} />
+    .map ( p => <Post message={p.post} likecounts={p.likecounts} />
         );
     return (
         <div className={s.itemAll}>

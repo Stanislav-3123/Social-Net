@@ -11,10 +11,10 @@ const Navbar = (props) => {
 
         <div className={s.navbar}>
             <div className={s.item}>
-                <NavLink to="/content" className = { navData => navData.isActive ? s.active : s.item }>Profile</NavLink>
+                <NavLink to="/profile" className = { navData => navData.isActive ? s.active : s.item }>Profile</NavLink>
             </div>
             <div className={s.item}>
-                <NavLink to="/dialogs" className = { navData => navData.isActive ? s.active : s.item }>Messeges</NavLink>
+                <NavLink to="/dialogs" className = { navData => navData.isActive ? s.active : s.item }>Messages</NavLink>
             </div>
             <div className={s.item}>
                 <NavLink to="/music" className = { navData => navData.isActive ? s.active : s.item }>Music</NavLink>
