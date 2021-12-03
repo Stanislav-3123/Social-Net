@@ -16,11 +16,11 @@ const App = (props) => {
             <Navbar />
             <div className="App-wrapper">
                 <Routes>
-                   <Route path="/content" element={<Content />} />
-                   <Route path="/dialogs" element={<Dialogs />} />
-                   <Route path="/music" element={<Music />} />
-                   <Route path="/news" element={<News />} />
-                   <Route path="/settings" element={<Settings />} />
+                   <Route path="/content/*" element={<Content />} />
+                   <Route path="/dialogs/*" element={<Dialogs />} />
+                   <Route path="/music/*" element={<Music />} />
+                   <Route path="/news/*" element={<News />} />
+                   <Route path="/settings/*" element={<Settings />} />
                 </Routes>
             </div>
         </div>
