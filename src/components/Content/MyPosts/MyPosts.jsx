@@ -7,8 +7,12 @@ const MyPosts = (props) => {
 
     let PostData = [
         {id: 1, post: "Hello, how are you?", likecounts: 11 },
-        {id: 2, post: "It`s my first post", likecounts: 15 }
+        {id: 2, post: "It`s my first post", likecounts: 23 }
     ]
+
+    let myPostsElements = PostData
+    .map ( post =>  <Post message={post.post} likecounts={post.likecounts} />
+        );
     return (
         <div className={s.itemAll}>
             <div className={s.item}>
@@ -21,8 +25,7 @@ const MyPosts = (props) => {
                 <button>Add post</button>
             </div>
             <div className={s.item}>
-                <Post message={PostData[0].post} likecounts={PostData[0].likecounts} />
-                <Post message={PostData[1].post} likecounts={PostData[1].likecounts} />
+               {myPostsElements}
             </div>
         </div>
     );
