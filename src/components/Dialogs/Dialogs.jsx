@@ -32,7 +32,7 @@ const Dialogs = (props) => {
             </div>  
             
             <div className={s.messages}>
-               <Message message="Hello/" />
+               <Message message="Hello." />
                <Message message="How are you?" />
                <Message message="Learn React?" />
                <Message message="And Redux?" />
