@@ -9,6 +9,7 @@ import News from './components/News/News';
 import Settings from './components/Settings/Settings';
 
 const App = (props) => {
+
     return (
 
         <div className="App" >
@@ -16,8 +17,8 @@ const App = (props) => {
             <Navbar />
             <div className="App-wrapper">
                 <Routes>
-                   <Route path="/profile/*" element={<Profile />} />
-                   <Route path="/dialogs/*" element={<Dialogs />} />
+                   <Route path="/profile/*" element={<Profile posts={props.posts} />} />
+                   <Route path="/dialogs/*" element={<Dialogs messages={props.messages} dialogs={props.dialogs}/>} />
                    <Route path="/music/*" element={<Music />} />
                    <Route path="/news/*" element={<News />} />
                    <Route path="/settings/*" element={<Settings />} />
