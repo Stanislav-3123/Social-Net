@@ -23,7 +23,8 @@ let state = {
         posts: [
             {id: 1, post: "Hello, how are you?", likecounts: 11 },
             {id: 2, post: "It`s my first post", likecounts: 23 }
-        ]
+        ],
+        newPostText: 'It-kamasutra.com'
     }    
 }
 export let addPost = (postMessage) => {
@@ -33,6 +34,11 @@ export let addPost = (postMessage) => {
         likecounts: 0
     };
     state.profilePage.posts.push(newPost);
+    rerenderEntireTree(state);
+}
+export let updateNewPostText = (newText) => {
+    
+    state.profilePage.newPostText = newText;        
     rerenderEntireTree(state);
 }
 
