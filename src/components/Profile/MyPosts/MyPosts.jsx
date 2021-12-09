@@ -28,7 +28,7 @@ const MyPosts = (props) => {
                 <div>
                     <textarea 
                     onChange={ onPostChange } 
-                    ref={newPostElement} placeholder="New post" 
+                    ref={newPostElement} placeholder="New___post" 
                     // value={props.newPostText}
                     />
                 </div>
