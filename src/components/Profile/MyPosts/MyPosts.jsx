@@ -19,6 +19,8 @@ const MyPosts = (props) => {
         let text = newPostElement.current.value;
         // newPostText(text);
     }
+    
+    
     return (
         <div className={s.itemAll}>
             <div className={s.item}>
