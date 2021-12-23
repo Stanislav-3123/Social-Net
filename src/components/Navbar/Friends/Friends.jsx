@@ -14,7 +14,7 @@ const Friends = (props) => {
 
     return (
         <div className={s.friendsOnline}>
-            <h2 className={s.head}>Friends</h2>
+            <h2 className={s.head}>Friends:</h2>
             {friendsOnlineElements}
 
         </div>
