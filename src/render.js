@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
-import { addPost } from './redux/state'
+import { addPost, updateNewPostText } from './redux/state'
 
 
 
@@ -14,6 +14,7 @@ ReactDOM.render(
     <BrowserRouter>
       <App 
       state={state} 
+      updateNewPostText={updateNewPostText}
       addPost={addPost}/>
     </BrowserRouter>
   </React.StrictMode>,

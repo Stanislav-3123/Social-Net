@@ -1,4 +1,4 @@
-import {rerenderEntireTree} from './../render'
+import { rerenderEntireTree } from './../render'
 
 let state = {
     messagesPage: {
@@ -21,8 +21,8 @@ let state = {
     },
     profilePage: {
         posts: [
-            {id: 1, post: "Hello, how are you?", likecounts: 11 },
-            {id: 2, post: "It`s my first post", likecounts: 23 }
+            { id: 1, post: "Hello, how are you?", likecounts: 11 },
+            { id: 2, post: "It`s my first post", likecounts: 23 }
         ],
         newPostText: 'It-kamasutra.com'
     },
@@ -32,7 +32,7 @@ let state = {
             { id: 2, name: 'Vlad' },
             { id: 3, name: 'Viktor' }
         ]
-    }   
+    }
 }
 export let addPost = (postMessage) => {
     let newPost = {
@@ -44,8 +44,7 @@ export let addPost = (postMessage) => {
     rerenderEntireTree(state);
 }
 export let updateNewPostText = (newText) => {
-    
-    state.profilePage.newPostText = newText;        
+    state.profilePage.newPostText = newText;
     rerenderEntireTree(state);
 }
 
