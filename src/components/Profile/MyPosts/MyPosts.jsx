@@ -30,7 +30,7 @@ const MyPosts = (props) => {
                 <div>
                     <textarea 
                     onChange={ onPostChange } 
-                    ref={newPostElement} placeholder="New___post" 
+                    ref={newPostElement} placeholder="New post" 
                     // value={props.newPostText}
                     />
                 </div>

@@ -9,7 +9,7 @@ let state = {
             { id: 4, name: 'Gleb' },
             { id: 5, name: 'Anfisa' },
             { id: 6, name: 'Irina' },
-            { id: 7, name: 'Ruskan' }
+            { id: 7, name: 'Ruslan' }
         ],
         messages: [
             { id: 1, message: "Hello." },
