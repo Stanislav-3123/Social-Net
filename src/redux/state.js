@@ -19,6 +19,7 @@ let state = {
             { id: 4, message: "And Redux?" },
             { id: 5, message: "Yo!" }
         ],
+        newMessageText: 'Hello!'
     },
     profilePage: {
         posts: [
@@ -34,6 +35,19 @@ let state = {
             { id: 3, name: 'Viktor' }
         ]
     }
+}
+export let addMessage = () => {
+    let newMessage = {
+        id: 6,
+        message: state.messagesPage.newMessageText ,
+    };
+    state.messagesPage.messages.push(newMessage);
+    state.messagesPage.newMessageText = '';
+    rerenderEntireTree(state);
+}
+export let updateNewMessageText = (newMessage) => {
+    state.messagesPage.newMessageText = newMessage;
+    rerenderEntireTree(state);
 }
 export let addPost = () => {
     let newPost = {

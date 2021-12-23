@@ -18,7 +18,7 @@ const App = (props) => {
             <div className="App-wrapper">
                 <Routes>
                     <Route path="/profile/*"
-                        element={<Profile
+                        element={<Profile 
                             updateNewPostText={props.updateNewPostText}
                             newPostText={props.state.profilePage.newPostText}
                             profilePage={props.state.profilePage}
@@ -26,6 +26,10 @@ const App = (props) => {
                             addPost={props.addPost}/>} />
                     <Route path="/dialogs/*"
                         element={<Dialogs
+                            addMessage={props.addMessage}
+                            messagesPage={props.state.messagesPage}
+                            newMessageText={props.state.messagesPage}
+                            updateNewMessageText={props.updateNewMessageText}
                             messages={props.state.messagesPage.messages}
                             dialogs={props.state.messagesPage.dialogs} />} />
                     <Route path="/music/*" element={<Music />} />
