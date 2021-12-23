@@ -45,8 +45,8 @@ export let addMessage = () => {
     state.messagesPage.newMessageText = '';
     rerenderEntireTree(state);
 }
-export let updateNewMessageText = (newMessage) => {
-    state.messagesPage.newMessageText = newMessage;
+export let updateNewMessageText = (newMessageText) => {
+    state.messagesPage.newMessageText = newMessageText;
     rerenderEntireTree(state);
 }
 export let addPost = () => {
