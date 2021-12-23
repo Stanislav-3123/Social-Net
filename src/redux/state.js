@@ -25,7 +25,14 @@ let state = {
             {id: 2, post: "It`s my first post", likecounts: 23 }
         ],
         newPostText: 'It-kamasutra.com'
-    }    
+    },
+    sideBar: {
+        friendsOnline: [
+            { id: 1, name: 'Natalia' },
+            { id: 2, name: 'Vlad' },
+            { id: 3, name: 'Viktor' }
+        ]
+    }   
 }
 export let addPost = (postMessage) => {
     let newPost = {
