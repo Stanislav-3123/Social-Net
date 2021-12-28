@@ -14,7 +14,8 @@ const App = (props) => {
 
         <div className="App" >
             <Header />
-            <Navbar friendsOnline={props.state.sideBar.friendsOnline} />
+            <Navbar 
+            friendsOnline={props.state.sideBar.friendsOnline} />
             <div className="App-wrapper">
                 <Routes>
                     <Route path="/profile/*"

@@ -36,9 +36,9 @@ let state = {
             { id: 2, name: 'Vlad' },
             { id: 3, name: 'Viktor' }
         ]
-    }
+    },
 }
-window.state = state;
+// window.state = state;
 export const addMessage = () => {
     let newMessage = {
         id: 6,
@@ -46,11 +46,11 @@ export const addMessage = () => {
     };
     state.messagesPage.messages.push(newMessage);
     state.messagesPage.newMessageText = '';
-    rerenderEntireTree();
+    rerenderEntireTree(state);
 }
 export const updateNewMessageText = (newMessageText) => {
     state.messagesPage.newMessageText = newMessageText;
-    rerenderEntireTree();
+    rerenderEntireTree(state);
 }
 export const addPost = () => {
     let newPost = {
@@ -60,11 +60,11 @@ export const addPost = () => {
     };
     state.profilePage.posts.push(newPost);
     state.profilePage.newPostText = '';
-    rerenderEntireTree();
+    rerenderEntireTree(state);
 }
 export const updateNewPostText = (newText) => {
     state.profilePage.newPostText = newText;
-    rerenderEntireTree();
+    rerenderEntireTree(state);
 }
 export const subscribe = (observer) => {
     rerenderEntireTree = observer;  // observer
