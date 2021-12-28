@@ -1,5 +1,11 @@
+.friendsItems {
+  display: grid;
+  grid-template-columns: repeat(3 , 1fr);
+  
+}
+
 .friendsOnline img {
-    width: 50px;
+    width: 30px;
     border-radius: 100%;
   }
 
