@@ -1,7 +1,6 @@
-/* .item {
-  display: flex;
-  flex-direction: column-reverse;
-} */
+.item {
+  color: azure;
+}
 
 
 .item img {
