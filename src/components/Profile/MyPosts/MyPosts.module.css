@@ -6,3 +6,8 @@
 .itemAll {
   padding-left: 10px;
 }
+
+.itemPosts {
+  display: flex;
+  flex-direction: column-reverse;
+}

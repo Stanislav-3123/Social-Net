@@ -1,3 +1,9 @@
+/* .item {
+  display: flex;
+  flex-direction: column-reverse;
+} */
+
+
 .item img {
   width: 50px;
   padding-left: 10px;
