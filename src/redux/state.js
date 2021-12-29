@@ -25,8 +25,8 @@ let store = {
         },
         profilePage: {
             posts: [
-                { id: 1, post: "Hello, how are you?", likecounts: 11 },
-                { id: 2, post: "It`s my first post", likecounts: 23 }
+                { id: 1, post: "It`s my first post", likecounts: 11 },
+                { id: 2, post: "Hello, how are you?", likecounts: 23 }
             ],
             newPostText: 'It-kamasutra.com'
         },
@@ -92,26 +92,26 @@ let store = {
             this._state.profilePage.newPostText = action.newText;
             this._callSubscriber(this._state);
         } else if (action.type === UPDATE_NEW_MESSAGE_BODY) {
-            this._state.messagesPage.newMessageBody = action.body ;
+            this._state.messagesPage.newMessageBody = action.body;
             this._callSubscriber(this._state);
         } else if (action.type === SEND_MESSAGE) {
-           let body = this._state.messagesPage.newMessageBody;
-           this._state.messagesPage.newMessageBody = ''
+            let body = this._state.messagesPage.newMessageBody;
+            this._state.messagesPage.newMessageBody = ''
             this._state.messagesPage.messages.push({ id: 6, message: body });
-            this._callSubscriber(this._state); 
+            this._callSubscriber(this._state);
         }
-        
+
 
     }
 }
 
-export const addPostActionCreator = () => ({type: ADD_POST})
+export const addPostActionCreator = () => ({ type: ADD_POST })
 
 export const updateNewPostTextActionCreator = (text) => ({
     type: UPDATE_NEW_POST_TEXT,
     newText: text
 })
-export const sendMessageCreator = () => ({type: SEND_MESSAGE})
+export const sendMessageCreator = () => ({ type: SEND_MESSAGE })
 
 export const updateNewMessageBodyCreator = (body) => ({
     type: UPDATE_NEW_MESSAGE_BODY,
