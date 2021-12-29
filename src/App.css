@@ -1,6 +1,7 @@
 .App { 
-  width: 0 auto;
+  width: 1200px;
   display: grid;
+  margin: 0 auto;
 
  grid-template-areas:
 "h h"
@@ -14,6 +15,8 @@
   background: rgb(2,0,36);
   background: linear-gradient(324deg, rgba(2,0,36,1) 0%, rgba(54,69,24,1) 37%, rgba(0,212,255,1) 88%);
   grid-area: c;
+
+
 }
 
 .App-wrapper img {

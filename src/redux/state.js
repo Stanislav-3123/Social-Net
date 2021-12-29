@@ -42,14 +42,12 @@ let store = {
     _callSubscriber() {
         console.log('State is changed!');
     },
-
     subscribe(observer) {
         this._callSubscriber = observer;  // observer
     },
     getState() {
         return this._state
     },
-
     addMessage() {
         let newMessage = {
             id: 6,
