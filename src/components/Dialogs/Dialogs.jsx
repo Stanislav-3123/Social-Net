@@ -2,27 +2,38 @@ import React from 'react';
 import s from './Dialogs.module.css';
 import Message from './Message/Message';
 import DialogItem from './DialogItem/DialogItem';
+import { updateNewMessageBodyCreator, sendMessageCreator } from './../../redux/state'
 
 
 
 const Dialogs = (props) => {
+     let state = props.store.getState().messagesPage;
+    // debugger;
     let messageElements =
-        props.messages.map(m => <Message message={m.message} />
+        state.messages.map(m => <Message message={m.message} />
         );
-    let newMessageElement = React.createRef();
+    // let newMessageElement = React.createRef();
 
-    let addMessage = () => {
-        props.addMessage ();
-       
-    }
+    // let addMessage = () => {
+    //   props.store.dispatch(addMessageActionCreator());
+
+
     let dialogsElements =
-        props.dialogs.map(d => <DialogItem name={d.name} id={d.id} />
+    state.dialogs.map(d => <DialogItem name={d.name} id={d.id} />
         );
+    let newMessageBody = state.newMessageBody;
+    // let newMesssageText = props.state.newMesssageText
 
-
-    let onMessageChange = () => {
-        let text = newMessageElement.current.value;
-        props.updateNewMessageText(text);
+    // let onMessageChange = (e) => {
+    // let newMessageText = e.target.value;
+    //   props.store.dispatch(updateNewMessageTextActionCreator(newMessageText))
+    // }
+    let onSendMessageClick = () => {
+        props.store.dispatch(sendMessageCreator());
+    }
+    let onNewMessageChange = (e) => {
+        let body = e.target.value;
+        props.store.dispatch(updateNewMessageBodyCreator(body));
     }
     return (
         <div className={s.dialogs}>
@@ -33,15 +44,19 @@ const Dialogs = (props) => {
                 {messageElements}
             </div>
             <div>
-                <textarea placeholder="New message" 
-                onChange={onMessageChange}
-                className={s.messageText} 
-                ref={newMessageElement}
-                value={props.messagesPage.newMesssageText}
+                <textarea
+                    onChange={onNewMessageChange}
+                    placeholder='Enter your message'
+                    className={s.messageText}
+                    value={newMessageBody}
+
                 ></textarea>
             </div>
-            <button className={s.messageButton} 
-            onClick={addMessage}>Send message</button>
+            <div>
+                <button
+                    onClick={onSendMessageClick}
+                    className={s.messageButton}>Send message</button>
+            </div>
         </div>
     );
 }
