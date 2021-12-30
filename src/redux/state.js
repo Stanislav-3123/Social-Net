@@ -1,3 +1,8 @@
+import profileReducer from './profile-reducer'
+import messagesReducer from './messages-reducer'
+import sidebarReducer from './sidebar-reducer'
+
+
 const ADD_POST = 'ADD-POST'
 const SEND_MESSAGE = 'SEND-MESSAGE'
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT'
@@ -79,29 +84,33 @@ let store = {
     // },
 
     dispatch(action) {
-        if (action.type === ADD_POST) {
-            let newPost = {
-                id: 5,
-                post: this._state.profilePage.newPostText,
-                likecounts: 0
-            };
-            this._state.profilePage.posts.push(newPost);
-            this._state.profilePage.newPostText = '';
-            this._callSubscriber(this._state);
-        } else if (action.type === UPDATE_NEW_POST_TEXT) {
-            this._state.profilePage.newPostText = action.newText;
-            this._callSubscriber(this._state);
-        } else if (action.type === UPDATE_NEW_MESSAGE_BODY) {
-            this._state.messagesPage.newMessageBody = action.body;
-            this._callSubscriber(this._state);
-        } else if (action.type === SEND_MESSAGE) {
-            let body = this._state.messagesPage.newMessageBody;
-            this._state.messagesPage.newMessageBody = ''
-            this._state.messagesPage.messages.push({ id: 6, message: body });
-            this._callSubscriber(this._state);
-        }
 
+        this._state.profilePage = profileReducer(this._state.profilePage, action);
+        this._state.messagesPage = messagesReducer(this._state.messagesPage, action);
+        this._state.sideBar = sidebarReducer(this._state.sideBar, action);
 
+        this._callSubscriber(this._state);
+        // if (action.type === ADD_POST) {
+        //     let newPost = {
+        //         id: 5,
+        //         post: this._state.profilePage.newPostText,
+        //         likecounts: 0
+        //     };
+        //     this._state.profilePage.posts.push(newPost);
+        //     this._state.profilePage.newPostText = '';
+        //     this._callSubscriber(this._state);
+        // } else if (action.type === UPDATE_NEW_POST_TEXT) {
+        //     this._state.profilePage.newPostText = action.newText;
+        //     this._callSubscriber(this._state);
+        // } else if (action.type === UPDATE_NEW_MESSAGE_BODY) {
+        //     this._state.messagesPage.newMessageBody = action.body;
+        //     this._callSubscriber(this._state);
+        // } else if (action.type === SEND_MESSAGE) {
+        //     let body = this._state.messagesPage.newMessageBody;
+        //     this._state.messagesPage.newMessageBody = ''
+        //     this._state.messagesPage.messages.push({ id: 6, message: body });
+        //     this._callSubscriber(this._state);
+        // }
     }
 }
 
