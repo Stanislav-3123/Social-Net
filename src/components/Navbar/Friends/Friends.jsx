@@ -7,9 +7,9 @@ import FriendsOnline from './FriendsOnline/FriendsOnline';
 
 
 const Friends = (props) => {
-
+    let state = props.store.getState().sidebar;
     let friendsOnlineElements =
-        props.friendsOnline.map(f => <FriendsOnline id={f.id} name={f.name} />
+        state.friendsOnline.map(f => <FriendsOnline id={f.id} name={f.name} />
         );
 
     return (

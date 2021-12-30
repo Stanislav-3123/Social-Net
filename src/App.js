@@ -7,7 +7,7 @@ import { Routes, Route } from "react-router-dom";
 import Music from './components/Music/Music';
 import News from './components/News/News';
 import Settings from './components/Settings/Settings';
-import store from './redux/state';
+// import store from './redux/state';
 
 const App = (props) => {
 
@@ -16,7 +16,7 @@ const App = (props) => {
         <div className="App" >
             <Header />
             <Navbar 
-            friendsOnline={props.state.sideBar.friendsOnline} />
+            store={props.store} />
             <div className="App-wrapper">
                 <Routes>
                     <Route path="/profile/*"
