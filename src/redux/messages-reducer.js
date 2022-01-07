@@ -18,7 +18,7 @@ let initialState = {
         { id: 4, message: "And Redux?" },
         { id: 5, message: "Yo!" }
     ],
-    newMessageBody: ""
+    newMessageBody: "Hello"
 };
 
 const messagesReducer = (state = initialState, action) => {
