@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import s from './Navbar.module.css';
 import Friends from './Friends/Friends';
-import StoreContext from './../../StoreContext'
+
 
 
 
@@ -15,7 +15,7 @@ const Navbar = (props) => {
             <div className={s.item}>
                 <NavLink to="/profile" className = { navData => navData.isActive ? s.active : s.item }>Profile</NavLink>
             </div>
-            <div className={s.item}>
+            <div className={s.item}> 
                 <NavLink to="/dialogs" className = { navData => navData.isActive ? s.active : s.item }>Messages</NavLink>
             </div>
             <div className={s.item}>
@@ -27,12 +27,8 @@ const Navbar = (props) => {
             <div className={s.item}>
                 <NavLink to="/settings" className = { navData => navData.isActive ? s.active : s.item }>Settings</NavLink>
             </div>
-            <div>  
-                <StoreContext.Consumer>
-            {(store) => {
-                <Friends store={store}/>
-            }}
-                </StoreContext.Consumer>
+            <div>   
+               {/* <Friends store={props.store}/> */}
             </div>
         </div>
 
