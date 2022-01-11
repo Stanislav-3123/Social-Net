@@ -9,18 +9,17 @@ import Settings from './components/Settings/Settings';
 import DialogsContainer from './components/Dialogs/DialogsContainer';
 
 const App = (props) => {
-
     return (
-
         <div className="App" >
             <Header />
             <Navbar 
-            store={props.store} />
+           // store={props.store} 
+           />
             <div className="App-wrapper">
                 <Routes>
                     <Route path="/profile/*"
                         element={<Profile 
-                            store={props.store}
+                           // store={props.store}
                             // updateNewPostText={props.updateNewPostText}
                             // newPostText={props.state.profilePage.newPostText}
                             // profilePage={props.state.profilePage}
@@ -30,7 +29,7 @@ const App = (props) => {
                             />} />
                     <Route path="/dialogs/*"
                         element={<DialogsContainer
-                        store={props.store}
+                        // store={props.store}
                         //dispatch={props.dispatch}
                             // addMessage={props.addMessage}
                          // state={props.state.messagesPage}
@@ -45,8 +44,6 @@ const App = (props) => {
                 </Routes>
             </div>
         </div>
-
-
     );
 }
 
