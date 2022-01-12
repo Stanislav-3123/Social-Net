@@ -27,6 +27,7 @@ const App = (props) => {
                             // addPost={props.addPost}
                             // dispatch={props.dispatch}
                             />} />
+                    <Route path="/users/*" element={<div>Users</div>} />
                     <Route path="/dialogs/*"
                         element={<DialogsContainer
                         // store={props.store}
