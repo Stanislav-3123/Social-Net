@@ -17,7 +17,7 @@ ReactDOM.render(
                 // state={state} dispatch={store.dispatch.bind(store)} store={store}
                 // updateNewMessageText={store.updateNewMessageText.bind(store)}
                 // addMessage={store.addMessage.bind(store)}
-                // store={store}
+                // sidebar={store.sidebar}
                 // state={state}
                 // dispatch={store.dispatch.bind(store)}
                 />

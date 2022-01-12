@@ -13,7 +13,7 @@ const App = (props) => {
         <div className="App" >
             <Header />
             <Navbar 
-           // store={props.store} 
+        //    sidebar={props.sidebar} 
            />
             <div className="App-wrapper">
                 <Routes>
