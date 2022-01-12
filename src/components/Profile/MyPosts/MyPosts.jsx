@@ -6,7 +6,7 @@ const MyPosts = (props) => {
 
 
     let myPostsElements =
-        props.posts.map(p => <Post message={p.post} likecounts={p.likecounts} />);
+        props.profilePage.posts.map(p => <Post message={p.post} likecounts={p.likecounts} />);
     let newPostElement = React.createRef();
 
     let onAddPost = () => {
@@ -27,7 +27,7 @@ const MyPosts = (props) => {
                         onChange={onPostChange}
                         ref={newPostElement}
                         placeholder="New post"
-                        value={props.newPostText}
+                        value={props.profilePage.newPostText}
                     />
                 </div>
                 <button onClick={onAddPost}>Add post</button>
