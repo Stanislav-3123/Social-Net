@@ -2,40 +2,7 @@ const FOLLOW = 'FOLLOW'
 const UNFOLLOW = 'UNFOLLOW'
 const SET_USERS = 'SET-USERS'
 let initialState = {
-    users: [
-        {
-            id: 1,
-            avatar: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png",
-            followed: true, 
-            fullName: "Stanislav",
-            status: "Learning React",
-            location: { country: "Ukraine", city: "Donetsk" }
-        },
-        {
-            id: 2,
-            avatar: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png",
-            followed: false, 
-            fullName: "Stanislav",
-            status: "Learning React",
-            location: { country: "Ukraine", city: "Donetsk" }
-        },
-        {
-            id: 3,
-            avatar: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png",
-            followed: true, 
-            fullName: "Stanislav",
-            status: "Learning React",
-            location: { country: "Ukraine", city: "Donetsk" }
-        },
-        {
-            id: 4,
-            avatar: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png",
-            followed: false, 
-            fullName: "Stanislav",
-            status: "Learning React",
-            location: { country: "Ukraine", city: "Donetsk" }
-        },
-    ]
+    users:[]
 };
 
 const usersReducer = (state = initialState, action) => {
