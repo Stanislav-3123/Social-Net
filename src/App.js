@@ -7,6 +7,7 @@ import Music from './components/Music/Music';
 import News from './components/News/News';
 import Settings from './components/Settings/Settings';
 import DialogsContainer from './components/Dialogs/DialogsContainer';
+import UsersContaier from './components/Users/UsersContaier';
 
 const App = (props) => {
     return (
@@ -27,7 +28,7 @@ const App = (props) => {
                             // addPost={props.addPost}
                             // dispatch={props.dispatch}
                             />} />
-                    <Route path="/users/*" element={<div>Users</div>} />
+                    <Route path="/users/*" element={<UsersContaier />} />
                     <Route path="/dialogs/*"
                         element={<DialogsContainer
                         // store={props.store}
