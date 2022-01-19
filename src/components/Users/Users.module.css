@@ -3,3 +3,10 @@
     height: 100px;
 }
  
+.selectedPage {
+    font-weight: bold;
+    color: gold;
+}
+.pages {
+    cursor: pointer;
+}
