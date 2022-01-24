@@ -1,5 +1,5 @@
 import './App.css';
-import Profile from './components/Profile/Profile';
+// import Profile from './components/Profile/Profile';
 import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
 import { Routes, Route } from "react-router-dom";
@@ -8,8 +8,9 @@ import News from './components/News/News';
 import Settings from './components/Settings/Settings';
 import DialogsContainer from './components/Dialogs/DialogsContainer';
 import UsersContaier from './components/Users/UsersContaier';
+import ProfileContainer from './components/Profile/ProfileContainer';
 
-const App = (props) => {
+const App = () => {
     return (
         <div className="App" >
             <Header />
@@ -19,7 +20,7 @@ const App = (props) => {
             <div className="App-wrapper">
                 <Routes>
                     <Route path="/profile/*"
-                        element={<Profile 
+                        element={<ProfileContainer 
                            // store={props.store}
                             // updateNewPostText={props.updateNewPostText}
                             // newPostText={props.state.profilePage.newPostText}

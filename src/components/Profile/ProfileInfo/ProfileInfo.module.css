@@ -6,6 +6,11 @@
     object-fit: cover  <---  выравнивание картинки по размеру блока*/
 }
 
+.contactItems {
+    width: 20px;
+    height: 20px;
+}
+
 .item {
     padding: 10px;
 }
