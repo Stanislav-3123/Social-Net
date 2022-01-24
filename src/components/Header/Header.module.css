@@ -7,3 +7,7 @@
     background: linear-gradient(165deg, rgba(2,0,36,1) 0%, rgba(213,11,11,1) 37%, rgba(0,212,255,1) 88%);
     grid-area: h;
 }
+.loginBlock {
+    float: right;
+    color: azure;
+}

@@ -1,8 +1,8 @@
 import './App.css';
 // import Profile from './components/Profile/Profile';
-import Header from './components/Header/Header';
+import HeaderContainer from './components/Header/HeaderContainer';
 import Navbar from './components/Navbar/Navbar';
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route } from 'react-router-dom';
 import Music from './components/Music/Music';
 import News from './components/News/News';
 import Settings from './components/Settings/Settings';
@@ -13,7 +13,7 @@ import ProfileContainer from './components/Profile/ProfileContainer';
 const App = () => {
     return (
         <div className="App" >
-            <Header />
+            <HeaderContainer />
             <Navbar 
         //    sidebar={props.sidebar} 
            />

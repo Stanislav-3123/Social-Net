@@ -3,7 +3,7 @@ import Preloader from '../../../common/preloader/preloader';
 import style from './ProfileInfo.module.css';
 import gitHubIcon from './../../../accepts/photos/giHubIcon.png';
 import vkLogo from './../../../accepts/photos/vkLogo.svg';
-import faceBookIcon from './../../../accepts/photos/faceBookIcon.svg';
+import faceBookIcon from './../../../accepts/photos/faceBookIcon.png';
 import instagramIcon from './../../../accepts/photos/instagramIcon.png';
 import twitterIcon from './../../../accepts/photos/twitterIcon.png';
 
@@ -43,6 +43,5 @@ const ProfileInfo = (props) => {
         </div>
     );
 }
-
 
 export default ProfileInfo;

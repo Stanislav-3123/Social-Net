@@ -1,13 +1,15 @@
 import React from 'react';
-import s from './Header.module.css';
+import style from './Header.module.css';
 
-
-const Header = () => {
+const Header = (props) => {
     return (
-        <div className={s.header}>
-            <img src='https://i.pinimg.com/originals/d3/73/08/d37308d557d5feac1828114327840f3d.jpg'></img>
-        </div>
-
+            <div className={style.header}>
+                <img src='https://i.pinimg.com/originals/d3/73/08/d37308d557d5feac1828114327840f3d.jpg'></img>
+                <div className={style.loginBlock}>
+                  {props.isAuth ? props.login 
+                  : <a href={'/login'}>Login</a>}
+                </div>
+            </div>
     );
 }
 
