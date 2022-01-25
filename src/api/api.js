@@ -10,7 +10,7 @@ const instance = axios.create({
 
 });
 
-export const usersApi = {
+export const usersAPI = {
     getUsers = (currentPage = 1, pageSize = 10) => {
         return instance.get(`users?page=${currentPage}&count=${pageSize}`)
             .then(response => {
@@ -21,10 +21,5 @@ export const usersApi = {
 
 
 
-export const getUsers2 = (currentPage = 1, pageSize = 10) => {
-    return instance.get(baseUrl + `follow=${currentPage}&count=${pageSize}`)
-        .then(response => {
-            return response.data
-        });
-}
+
 
