@@ -6,10 +6,10 @@ import { usersAPI } from '../../../api/api';
 
 class FriendsContainer extends React.Component {
 	componentDidMount() {
-
-		// axios.get('https://social-network.samuraijs.com/api/1.0/users/').then(response => {
-		// 	response.data.items.id.followed;
-		// })
+		// axios.get('https://social-network.samuraijs.com/api/1.0/users/')
+		// 	.then(response => {
+		// 		response.data.items.id.followed;
+		// 	})
 	}
 	render() {
 		return <>
