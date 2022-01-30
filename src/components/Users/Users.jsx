@@ -4,7 +4,6 @@ import userPhoto from './../../accepts/photos/user.png';
 import { NavLink } from 'react-router-dom';
 
 let Users = (props) => {
-	debugger;
 	let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
 	let pages = [];
 	for (let i = 1; i <= pagesCount; i++) {
@@ -30,7 +29,6 @@ let Users = (props) => {
 						{u.followed
 							? <button disabled={props.followingInProgress.some(id => id === u.id)} onClick={() => {
 								props.unfollow(u.id)
-								debugger;
 								// axios.delete(`https://social-network.samuraijs.com/api/1.0/follow/${u.id}`, {
 								// 	withCredentials: true,
 								// 	headers: {
