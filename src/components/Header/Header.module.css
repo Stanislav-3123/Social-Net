@@ -10,4 +10,7 @@
 .loginBlock {
     float: right;
     color: azure;
+	 text-align: center;
+	 display: grid;
+	 grid-template-columns: repeat(2 , 1fr);
 }
