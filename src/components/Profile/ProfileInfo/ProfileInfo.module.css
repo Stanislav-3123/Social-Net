@@ -5,7 +5,10 @@
     height: 100%;
     object-fit: cover  <---  выравнивание картинки по размеру блока*/
 }
-
+.userPhoto {
+	width: 200px;
+    height: 200px;
+}
 .contactItems {
     width: 20px;
     height: 20px;

@@ -1,17 +1,17 @@
 import React from 'react';
 import Profile from './Profile';
 import { connect } from 'react-redux';
-import { setUserProfile } from './../../redux/profile-reducer'
+import { getUserProfile } from './../../redux/profile-reducer'
 import { useMatch } from "react-router-dom";
-import { usersAPI } from '../../api/api';
 
 class ProfileContainer extends React.Component {
 	componentDidMount() {
 		let userId = this.props.match ? this.props.match.params.userId : '21802';
 		// let userId = this.props.match.params.userId;
-		usersAPI.getProfile(userId).then(response => {
-			this.props.setUserProfile(response.data);
-		});
+		// usersAPI.getProfile(userId).then(response => {
+		// 	this.props.setUserProfile(response.data);
+		// });
+		this.props.getUserProfile(userId);
 	}
 	render() {
 		return (
@@ -31,4 +31,4 @@ const ProfileMatch = (props) => {
 	)
 }
 
-export default connect(mapStateToProps, { setUserProfile })(ProfileMatch);
+export default connect(mapStateToProps, { getUserProfile })(ProfileMatch);
