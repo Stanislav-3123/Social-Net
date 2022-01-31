@@ -3,20 +3,21 @@ import MyPostsContainer from './MyPosts/MyPostsContainer';
 import ProfileInfo from './ProfileInfo/ProfileInfo';
 
 const Profile = (props) => {
-    return (
-        <div>
-            <ProfileInfo profile={props.profile} />
-            <MyPostsContainer
-            // store={props.store}
-            // updateNewPostText={props.updateNewPostText}
-            // newPostText={props.profilePage.newPostText}
-            // profilePage={props.profilePage}
-            // posts={props.posts} 
-            // dispatch={props.dispatch}
-            //addPost={props.addPost}
-            />
-        </div>
-    );
+
+	return (
+		<div>
+			<ProfileInfo profile={props.profile} />
+			<MyPostsContainer
+			// store={props.store}
+			// updateNewPostText={props.updateNewPostText}
+			// newPostText={props.profilePage.newPostText}
+			// profilePage={props.profilePage}
+			// posts={props.posts} 
+			// dispatch={props.dispatch}
+			//addPost={props.addPost}
+			/>
+		</div>
+	);
 }
 
 export default Profile;

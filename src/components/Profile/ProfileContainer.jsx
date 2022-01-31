@@ -2,7 +2,7 @@ import React from 'react';
 import Profile from './Profile';
 import { connect } from 'react-redux';
 import { getUserProfile } from './../../redux/profile-reducer'
-import { useMatch } from "react-router-dom";
+import { Navigate, useMatch } from "react-router-dom";
 
 class ProfileContainer extends React.Component {
 	componentDidMount() {
@@ -14,6 +14,7 @@ class ProfileContainer extends React.Component {
 		this.props.getUserProfile(userId);
 	}
 	render() {
+		if (!this.props.isAuth) return <Navigate to="/login" />
 		return (
 			<div>
 				<Profile {...this.props} profile={this.props.profile} />
@@ -22,7 +23,8 @@ class ProfileContainer extends React.Component {
 	}
 }
 let mapStateToProps = (state) => ({
-	profile: state.profilePage.profile
+	profile: state.profilePage.profile,
+	isAuth: state.auth.isAuth
 });
 const ProfileMatch = (props) => {
 	let match = useMatch("/profile/:userId/");
