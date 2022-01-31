@@ -15,3 +15,6 @@
 .followButton {
 	cursor: pointer;
 }
+.wrapper {
+	padding-left: 5px;
+}

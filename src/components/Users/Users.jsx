@@ -9,7 +9,7 @@ let Users = (props) => {
 	for (let i = 1; i <= pagesCount; i++) {
 		pages.push(i);
 	}
-	return <div>
+	return <div className={style.wrapper}>
 		<div className={style.pages}>
 			{pages.map(p => {
 				return <span className={props.currentPage === p && style.selectedPage}
