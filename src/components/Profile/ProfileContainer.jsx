@@ -1,7 +1,7 @@
 import React from 'react';
 import Profile from './Profile';
 import { connect } from 'react-redux';
-import { getUserProfile } from './../../redux/profile-reducer'
+import { getUserProfile, setUserStatus, updateStatus, getStatus } from './../../redux/profile-reducer'
 import { useMatch } from "react-router-dom";
 import { WithAuthNavigateComponent } from '../../hoc/WithAuthNavigate';
 
@@ -13,12 +13,14 @@ class ProfileContainer extends React.Component {
 		// 	this.props.setUserProfile(response.data);
 		// });
 		this.props.getUserProfile(userId);
+		this.props.getStatus(userId);
+		this.props.setUserStatus(userId);
 	}
 	render() {
 		// if (!this.props.isAuth) return <Navigate to="/login" />
 		return (
 			<div>
-				<Profile {...this.props} profile={this.props.profile} />
+				<Profile {...this.props} profile={this.props.profile} stat={this.props.status} updateStatus={this.props.updateStatus} />
 			</div>
 		);
 	}
@@ -36,6 +38,7 @@ let AuthNavigateComponent = WithAuthNavigateComponent(ProfileContainer);
 // }
 let mapStateToProps = (state) => ({
 	profile: state.profilePage.profile,
+	status: state.profilePage.status
 	// isAuth: state.auth.isAuth
 });
 const ProfileMatch = (props) => {
@@ -45,4 +48,4 @@ const ProfileMatch = (props) => {
 	)
 }
 
-export default connect(mapStateToProps, { getUserProfile })(ProfileMatch);
+export default connect(mapStateToProps, { setUserStatus, getUserProfile, updateStatus, getStatus })(ProfileMatch);

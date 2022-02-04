@@ -1,15 +1,12 @@
 import * as axios from 'axios';
 
-
 const instance = axios.create({
 	baseURL: 'https://social-network.samuraijs.com/api/1.0/',
 	withCredentials: true,
 	headers: {
 		"API-KEY": "5fed59e2-86db-4015-9eef-7078801ec907"
 	}
-
 });
-
 export const usersAPI = {
 	getUsers(currentPage, pageSize) {
 		return instance.get(`users?page=${currentPage}&count=${pageSize}`)
@@ -24,12 +21,24 @@ export const usersAPI = {
 		return instance.delete(`follow/${userId}`)
 	},
 	getProfile(userId) {
-		return instance.get(`profile/` + userId);
+		console.warn('Obsolete metod. Please ProfileAPI object.')
+		return profileAPI.getProfile(userId);
 	}
 }
 export const authAPI = {
 	me() {
 		return instance.get(`auth/me`)
+	}
+}
+export const profileAPI = {
+	getProfile(userId) {
+		return instance.get(`profile/` + userId);
+	},
+	getStatus(userId) {
+		return instance.get(`profile/status/` + userId);
+	},
+	updateStatus(status) {
+		return instance.put(`profile/status/`, { status: status });
 	}
 }
 
