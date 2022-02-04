@@ -2,11 +2,14 @@ import React from 'react';
 import { updateNewMessageBodyCreator, sendMessageCreator } from './../../redux/messages-reducer'
 import Dialogs from './Dialogs';
 import { connect } from 'react-redux';
+// import { Navigate } from "react-router-dom";
+import { WithAuthNavigateComponent } from '../../hoc/WithAuthNavigate';
+import { compose } from 'redux';
 
 let mapStateToProps = (state) => {
 	return {
 		messagesPage: state.messagesPage,
-		isAuth: state.auth.isAuth
+		// isAuth: state.auth.isAuth
 	}
 }
 let mapDispatchToProps = (dispatch) => {
@@ -20,10 +23,13 @@ let mapDispatchToProps = (dispatch) => {
 		}
 	}
 }
-let DialogsContainer = connect(mapStateToProps, mapDispatchToProps)(Dialogs);
-
-export default DialogsContainer;
-
+// let AuthNavigateComponent = WithAuthNavigateComponent(Dialogs);
+// (props) => {
+// 	if (!props.isAuth) return <Navigate to="/login" />
+// 	return <Dialogs {...props} />
+// }
+// let DialogsContainer = connect(mapStateToProps, mapDispatchToProps)(AuthNavigateComponent);
+export default compose(connect(mapStateToProps, mapDispatchToProps), WithAuthNavigateComponent)(Dialogs);
 // const DialogsContainer = (props) => {
 //     // let state = props.store.getState();
 

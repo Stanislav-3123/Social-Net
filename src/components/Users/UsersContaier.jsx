@@ -5,6 +5,8 @@ import {
 	follow, unfollow, setCurrentPage, toggleFollowingProgress, getUsers
 } from './../../redux/users-reducer'
 import Preloader from "../../common/preloader/preloader";
+import { WithAuthNavigateComponent } from "../../hoc/WithAuthNavigate";
+import { compose } from "redux";
 
 class UsersContainer extends React.Component {
 	componentDidMount() {
@@ -52,7 +54,7 @@ let mapStateToProps = (state) => {
 		followingInProgress: state.usersPage.followingInProgress
 	}
 }
-
-export default connect(mapStateToProps, {
-	follow, unfollow, setCurrentPage, toggleFollowingProgress, getUsers
-})(UsersContainer)
+export default compose(
+	connect(mapStateToProps, { follow, unfollow, setCurrentPage, toggleFollowingProgress, getUsers }),
+	WithAuthNavigateComponent
+)(UsersContainer);

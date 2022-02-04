@@ -10,11 +10,11 @@ const Navbar = (props) => {
 			<div >
 				<NavLink to="/profile" className={navStyle}>Profile</NavLink>
 			</div>
-			<div >
-				<NavLink to="/users" className={navStyle}>Users</NavLink>
+			<div>
+				<NavLink to="/dialogs" className={navStyle}>Messages</NavLink>
 			</div>
 			<div >
-				<NavLink to="/dialogs" className={navStyle}>Messages</NavLink>
+				<NavLink to="/users" className={navStyle}>Users</NavLink>
 			</div>
 			<div >
 				<NavLink to="/music" className={navStyle}>Music</NavLink>
