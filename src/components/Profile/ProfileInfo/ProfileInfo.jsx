@@ -7,6 +7,7 @@ import faceBookIcon from './../../../accepts/photos/faceBookIcon.png';
 import instagramIcon from './../../../accepts/photos/instagramIcon.png';
 import twitterIcon from './../../../accepts/photos/twitterIcon.png';
 import userPhoto from './../../../accepts/photos/user.png'
+import ProfileStatus from './ProfileStatus/ProfileSatus';
 
 const ProfileInfo = (props) => {
 	if (!props.profile) {
@@ -14,31 +15,32 @@ const ProfileInfo = (props) => {
 	}
 	return (
 		<div>
-			<div className={style.mainImg}>
+			{/* <div className={style.mainImg}>
 				<img src='https://n1s2.hsmedia.ru/60/b5/cc/60b5cc5266a98b966e2f35c57ed388c8/690x380_0x0a330c2a_12567029551616070388.jpeg'></img>
-			</div>
+			</div> */}
 			<div className={style.item}>
 				<div><h3>{props.profile.fullName}</h3></div>
-				<img className={style.userPhoto}
+				<img alt='userPhoto' className={style.userPhoto}
 					src={props.profile.photos.large != null ? props.profile.photos.large : userPhoto} />
-				<div>{props.profile.lookingForAJob != false ? 'Looking for a job' : 'I have a job'}</div>
+				<ProfileStatus status='Hello =)' />
+				<div>{props.profile.lookingForAJob !== false ? 'Looking for a job' : 'I have a job'}</div>
 				<div>{props.profile.lookingForAJobDescription}</div>
 				<div className={style.contacts}>
 					<h3>Контакты :</h3>
 					<div>
-						<img src={gitHubIcon} className={style.contactItems} />
+						<img alt='icon' src={gitHubIcon} className={style.contactItems} />
 						{props.profile.contacts.github}</div>
 					<div>
-						<img src={vkLogo} className={style.contactItems} />
+						<img alt='icon' src={vkLogo} className={style.contactItems} />
 						{props.profile.contacts.vk}</div>
 					<div>
-						<img src={faceBookIcon} className={style.contactItems} />
+						<img alt='icon' src={faceBookIcon} className={style.contactItems} />
 						{props.profile.contacts.facebook}</div>
 					<div>
-						<img src={instagramIcon} className={style.contactItems} />
+						<img alt='icon' src={instagramIcon} className={style.contactItems} />
 						{props.profile.contacts.instagram}</div>
 					<div>
-						<img src={twitterIcon} className={style.contactItems} />
+						<img alt='icon' src={twitterIcon} className={style.contactItems} />
 						{props.profile.contacts.twitter}</div>
 				</div>
 			</div>
