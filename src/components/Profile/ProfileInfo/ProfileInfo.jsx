@@ -28,19 +28,19 @@ const ProfileInfo = (props) => {
 				<div className={style.contacts}>
 					<h3>Контакты :</h3>
 					<div>
-						<img alt='icon' src={gitHubIcon} className={style.contactItems} />
+						{props.profile.contacts.github != null ? <img alt='icon' src={gitHubIcon} className={style.contactItems} /> : <span></span>}
 						{props.profile.contacts.github}</div>
 					<div>
-						<img alt='icon' src={vkLogo} className={style.contactItems} />
+						{props.profile.contacts.vk != null ? <img alt='icon' src={vkLogo} className={style.contactItems} /> : <span></span>}
 						{props.profile.contacts.vk}</div>
 					<div>
-						<img alt='icon' src={faceBookIcon} className={style.contactItems} />
+						{props.profile.contacts.facebook != null ? <img alt='icon' src={faceBookIcon} className={style.contactItems} /> : <span></span>}
 						{props.profile.contacts.facebook}</div>
 					<div>
-						<img alt='icon' src={instagramIcon} className={style.contactItems} />
+						{props.profile.contacts.instagram != null ? <img alt='icon' src={instagramIcon} className={style.contactItems} /> : <span></span>}
 						{props.profile.contacts.instagram}</div>
 					<div>
-						<img alt='icon' src={twitterIcon} className={style.contactItems} />
+						{props.profile.contacts.twitter != null ? <img alt='icon' src={twitterIcon} className={style.contactItems} /> : <span></span>}
 						{props.profile.contacts.twitter}</div>
 				</div>
 			</div>
