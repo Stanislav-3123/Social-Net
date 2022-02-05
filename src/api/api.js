@@ -21,13 +21,19 @@ export const usersAPI = {
 		return instance.delete(`follow/${userId}`)
 	},
 	getProfile(userId) {
-		console.warn('Obsolete metod. Please ProfileAPI object.')
+		console.warn('Obsolete metod. Please use ProfileAPI object.')
 		return profileAPI.getProfile(userId);
 	}
 }
 export const authAPI = {
 	me() {
 		return instance.get(`auth/me`)
+	},
+	login(email, password, rememberMe = false) {
+		return instance.post('/auth/login', { email, password, rememberMe });
+	},
+	logout() {
+		return instance.delete('/auth/login');
 	}
 }
 export const profileAPI = {

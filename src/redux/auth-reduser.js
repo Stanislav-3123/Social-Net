@@ -40,15 +40,29 @@ const authReduser = (state = initialState, action) => {
 			return state;
 	}
 }
-export const setAuthUserData = (userId, email, login) => ({ type: SET_USER_DATA, data: { userId, email, login } });
+export const setAuthUserData = (userId, email, login, isAuth) => ({ type: SET_USER_DATA, data: { userId, email, login, isAuth } });
 // export const setAuthUserId = (id) => ({ type: SET_USER_ID, id });
 // export const setAuthUserEmail = (email) => ({ type: SET_USER_EMAIL, email });
 // export const setAuthUserLogin = (login) => ({ type: SET_USER_LOGIN, login });
+export const login = (email, password, rememberMe) => (dispatch) => {
+	authAPI.login(email, password, rememberMe).then(response => {
+		if (response.data.resultCode === 0) {
+			dispatch(setAuthUserData());
+		}
+	});
+}
+export const logout = () => (dispatch) => {
+	authAPI.logout().then(response => {
+		if (response.data.resultCode === 0) {
+			dispatch(setAuthUserData(null, null, null, false));
+		}
+	});
+}
 export const getAuthUserData = () => (dispatch) => {
 	authAPI.me().then(response => {
 		if (response.data.resultCode === 0) {
-			let { id, email, login } = response.data.data;
-			dispatch(setAuthUserData(id, email, login));
+			let { id, email, login, } = response.data.data;
+			dispatch(setAuthUserData(id, email, login, true));
 			// dispatch(setAuthUserId(response.data.data.id));
 			// dispatch(setAuthUserEmail(response.data.data.email));
 			// dispatch(setAuthUserLogin(response.data.data.login));
