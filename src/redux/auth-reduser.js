@@ -17,8 +17,7 @@ const authReduser = (state = initialState, action) => {
 		case SET_USER_DATA:
 			return {
 				...state,
-				...action.data,
-				isAuth: true
+				...action.data
 			}
 		// case SET_USER_ID:
 		// 	return {
@@ -47,14 +46,14 @@ export const setAuthUserData = (userId, email, login, isAuth) => ({ type: SET_US
 export const login = (email, password, rememberMe) => (dispatch) => {
 	authAPI.login(email, password, rememberMe).then(response => {
 		if (response.data.resultCode === 0) {
-			dispatch(setAuthUserData());
+			dispatch(getAuthUserData());
 		}
 	});
 }
 export const logout = () => (dispatch) => {
 	authAPI.logout().then(response => {
 		if (response.data.resultCode === 0) {
-			dispatch(setAuthUserData(null, null, null, false));
+			dispatch(getAuthUserData(null, null, null, false));
 		}
 	});
 }
