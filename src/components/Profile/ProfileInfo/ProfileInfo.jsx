@@ -7,7 +7,7 @@ import faceBookIcon from './../../../accepts/photos/faceBookIcon.png';
 import instagramIcon from './../../../accepts/photos/instagramIcon.png';
 import twitterIcon from './../../../accepts/photos/twitterIcon.png';
 import userPhoto from './../../../accepts/photos/user.png'
-import ProfileStatus from './ProfileStatus/ProfileSatus';
+import ProfileStatusHook from './ProfileStatus/ProfileSatusHook';
 
 const ProfileInfo = (props) => {
 	if (!props.profile) {
@@ -22,7 +22,7 @@ const ProfileInfo = (props) => {
 				<div><h3>{props.profile.fullName}</h3></div>
 				<img alt='userPhoto' className={style.userPhoto}
 					src={props.profile.photos.large != null ? props.profile.photos.large : userPhoto} />
-				<ProfileStatus status={props.status} updateStatus={props.updateStatus} />
+				<ProfileStatusHook status={props.status} updateStatus={props.updateStatus} />
 				<div>{props.profile.lookingForAJob !== false ? 'Looking for a job' : 'I have a job'}</div>
 				<div>{props.profile.lookingForAJobDescription}</div>
 				<div className={style.contacts}>
