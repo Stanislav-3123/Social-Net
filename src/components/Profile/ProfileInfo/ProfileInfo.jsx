@@ -28,7 +28,7 @@ const ProfileInfo = (props) => {
 				<div className={style.contacts}>
 					<h3>Контакты :</h3>
 					<div>
-						{props.profile.contacts.github != null ? <img alt='icon' src={gitHubIcon} className={style.contactItems} /> : <span></span>}
+						{props.profile.contacts.github != null ? <img alt='icon' src={gitHubIcon} className={style.contactItems} /> : null}
 						{props.profile.contacts.github}</div>
 					<div>
 						{props.profile.contacts.vk != null ? <img alt='icon' src={vkLogo} className={style.contactItems} /> : <span></span>}

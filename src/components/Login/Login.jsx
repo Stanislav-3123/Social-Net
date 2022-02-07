@@ -4,16 +4,9 @@ import { connect } from 'react-redux';
 import { login } from './../../redux/auth-reduser';
 import { Navigate } from "react-router-dom";
 
-
 class Login extends React.Component {
 	componentDidMount() {
-
 	}
-
-	// loginUser(email, password, rememberMe) {
-	// 	this.props.login(email, password, rememberMe);
-	// }
-
 	render() {
 		if (this.props.isAuth) {
 			return <Navigate to="/profile" />
@@ -32,21 +25,3 @@ let mapStateToProps = (state) => {
 
 export default connect(mapStateToProps, { login })(Login);
 
-// const LoginForm = (props) => {
-	// 	return (
-	// 		<form>
-	// 			<div>
-	// 				<input placeholder={"Login"} />
-	// 			</div>
-	// 			<div>
-	// 				<input placeholder={"Password"} />
-	// 			</div>
-	// 			<div>
-	// 				<input type='checkbox' /> rememder me
-	// 			</div>
-	// 			<div>
-	// 				<button>Login</button>
-	// 			</div>
-	// 		</form>
-	// 	)
-	// }

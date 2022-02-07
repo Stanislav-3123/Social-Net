@@ -4,28 +4,12 @@ import React from "react";
 const LoginForm = (props) => {
 	const submit = (values, { setSubmitting }) => {
 		props.login(values.email, values.password, values.rememberMe);
-		// setTimeout(() => {
-		// alert(JSON.stringify(values, null, 2));
 		setSubmitting(false);
-		// }, 400);
 	}
 	return (
 		<Formik
 			initialValues={{ email: '', password: '', rememberMe: '' }}
-			// validate={values => {
-			// 	const errors = {};
-			// 	if (!values.email) {
-			// 		errors.email = 'Required';
-			// 	} else if (
-			// 		!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-			// 	) {
-			// 		errors.email = 'Invalid email address';
-			// 	}
-			// 	return errors;
-			// // }}
-			// onSubmit={submit}
 			onSubmit={submit}
-
 		>
 			{({
 				values,
@@ -34,8 +18,7 @@ const LoginForm = (props) => {
 				handleChange,
 				handleBlur,
 				handleSubmit,
-				isSubmitting,
-				/* and other goodies */
+				isSubmitting
 			}) => (
 				<form onSubmit={handleSubmit}>
 					<div>
