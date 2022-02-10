@@ -5,7 +5,7 @@ import userPhoto from './../../accepts/photos/user.png'
 
 const Header = (props) => {
 	return (
-		<div className={style.header}>
+		<header className={style.header}>
 			<img alt='img' src='https://i.pinimg.com/originals/d3/73/08/d37308d557d5feac1828114327840f3d.jpg'></img>
 			<div className={style.loginBlock}>
 				<img alt='img' src={userPhoto} />
@@ -13,7 +13,7 @@ const Header = (props) => {
 					? <div>{props.login} - <button onClick={props.logout}>Log out</button></div>
 					: <NavLink to={'/login'}>Login</NavLink>}
 			</div>
-		</div>
+		</header>
 	);
 }
 

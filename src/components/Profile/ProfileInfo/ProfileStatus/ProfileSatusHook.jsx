@@ -3,18 +3,21 @@ import { useState } from 'react';
 import style from './ProfileStatus.module.css';
 
 const ProfileStatusHook = (props) => {
-	debugger
 
 	let [editMode, setEditMode] = useState(false);
+	let [status, setStatus] = useState(props.status);
+
+	useState(() => {
+		debugger
+		setStatus(props.status);
+	}, []);
 	const activateEditMode = () => {
 		setEditMode(true);
 	}
 	const deactivateEditMode = () => {
 		setEditMode(false);
 		props.updateStatus(status);
-
 	}
-	let [status, setStatus] = useState(props.status);
 	let onStatusChange = (e) => {
 		setStatus(e.currentTarget.value);
 	}
