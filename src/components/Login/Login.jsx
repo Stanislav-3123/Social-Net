@@ -9,7 +9,6 @@ class Login extends React.Component {
 		this.props.getAuthUserData();
 	}
 	render() {
-		debugger
 		if (this.props.isAuth) {
 			return <Navigate to="/profile" />
 		}

@@ -10,7 +10,6 @@ import userPhoto from './../../../accepts/photos/user.png'
 import ProfileStatusHook from './ProfileStatus/ProfileSatusHook';
 
 const ProfileInfo = (props) => {
-	debugger
 	if (!props.profile) {
 		return <Preloader />
 	}
