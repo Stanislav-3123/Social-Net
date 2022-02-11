@@ -47,6 +47,14 @@ export const profileAPI = {
 		return instance.put(`profile/status/`, { status: status });
 	}
 }
+export const friendsAPI = {
+	getMyFriends() {
+		return instance.get(`users?friend=${true}`)
+			.then(response => {
+				return response.data
+			})
+	}
+}
 
 
 
