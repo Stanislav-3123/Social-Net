@@ -6,6 +6,9 @@
     background: rgb(2,0,36);
     background: linear-gradient(165deg, rgba(2,0,36,1) 0%, rgba(213,11,11,1) 37%, rgba(0,212,255,1) 88%);
     grid-area: h;
+	 position: fixed;
+	 width: 1200px;
+	 box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
 }
 .loginBlock {
     float: right;

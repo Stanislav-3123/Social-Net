@@ -7,7 +7,7 @@ const Navbar = (props) => {
 	let navStyle = navData => navData.isActive ? s.active : s.item
 	return (
 		<div className={s.navbar}>
-			<div >
+			<div className={s.itemBlock}>
 				<NavLink to="/profile" className={navStyle}>Profile</NavLink>
 			</div>
 			<div>

@@ -3,15 +3,21 @@
     background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 21%, rgba(24,69,36,1) 68%);;
     grid-area: n;
     padding: 20px;
+	 
 }
 
 .item {
     color: white;
     text-decoration: none;
 	 cursor: pointer;
-    
+	
 } 
 
 .active {
-    color: gold;
+	font-weight: bold;
+	color: gold;
+	padding: 5px;
+}
+.itemBlock {
+	border-color: blue;
 }

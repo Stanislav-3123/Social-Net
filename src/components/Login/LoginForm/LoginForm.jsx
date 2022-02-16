@@ -1,9 +1,9 @@
 import { Formik } from "formik"
 import React from "react";
 
-const LoginForm = (props) => {
+const LoginForm = ({ login }) => {
 	const submit = (values, { setSubmitting }) => {
-		props.login(values.email, values.password, values.rememberMe);
+		login(values.email, values.password, values.rememberMe);
 		setSubmitting(false);
 	}
 	return (
