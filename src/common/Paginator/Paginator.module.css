@@ -3,10 +3,9 @@
     margin: 10px;
 }
 .pageNumber {
-    padding: 2px;
+    padding: 5px;
     border: 1px solid grey;
 }
-
 .pageNumber.selectedPage {
     font-weight: bold;
     border-color: black;
@@ -16,6 +15,9 @@
 	color: gold;
 	padding: 3px;
 }
-.Pages {
+.paginator button {
+	cursor: pointer;
+}
+.paginator span {
 	cursor: pointer;
 }
