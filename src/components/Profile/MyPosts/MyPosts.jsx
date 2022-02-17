@@ -3,7 +3,6 @@ import s from './MyPosts.module.css';
 import Post from './Post/Post';
 
 const MyPosts = React.memo(props => {
-	console.log("RENDER");
 	let myPostsElements =
 		[...props.profilePage.posts]
 			.reverse()
