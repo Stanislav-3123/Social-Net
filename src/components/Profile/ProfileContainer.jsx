@@ -12,6 +12,14 @@ class ProfileContainer extends React.Component {
 		this.props.getStatus(userId);
 		this.props.setUserStatus(userId);
 	}
+	// componentDidUpdate(prevProps, prevState, snapshot) {
+	// 	if (this.props.match.params.userId !== this.prevProps.match.params.userId) {
+	// 		let userId = this.props.match ? this.props.match.params.userId : '21802';
+	// 		this.props. getUserProfile(userId);
+	// 		this.props.getStatus(userId);
+	// 		this.props.setUserStatus(userId);
+	// 	}
+	// }
 	render() {
 		return (
 			<div>
@@ -24,7 +32,9 @@ let AuthNavigateComponent = WithAuthNavigateComponent(ProfileContainer);
 
 let mapStateToProps = (state) => ({
 	profile: state.profilePage.profile,
-	status: state.profilePage.status
+	status: state.profilePage.status,
+	authorizedUserId: state.auth.userId,
+	isAuth: state.auth.isAuth
 });
 const ProfileMatch = (props) => {
 	let match = useMatch("/profile/:userId/");
