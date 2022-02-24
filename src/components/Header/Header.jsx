@@ -1,7 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import style from './Header.module.css';
-import userPhoto from './../../accepts/photos/user.png'
+import userPhoto from './../../accepts/photos/user.png';
+import { Button } from 'antd';
 
 const Header = (props) => {
 	return (
@@ -10,7 +11,7 @@ const Header = (props) => {
 			<div className={style.loginBlock}>
 				<img alt='img' src={userPhoto} />
 				{props.isAuth
-					? <div>{props.login} - <button onClick={props.logout}>Log out</button></div>
+					? <div>{props.login} - <Button onClick={props.logout} type="primary" danger>Log out</Button></div>
 					: <NavLink to={'/login'}>Login</NavLink>}
 			</div>
 		</header>
