@@ -41,7 +41,7 @@ const Dialogs = (props) => {
 			<div>
 				<button
 					onClick={onSendMessageClick}
-					className={s.messageButton}>Send message</button>
+					className={s.messageButton}>Send mеssage</button>
 			</div>
 		</div>
 	);
