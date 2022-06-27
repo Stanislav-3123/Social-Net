@@ -2,7 +2,6 @@
 import { updateNewMessageBodyCreator, sendMessageCreator } from './../../redux/messages-reducer'
 import Dialogs from './Dialogs';
 import { connect } from 'react-redux';
-// import { Navigate } from "react-router-dom";
 import { WithAuthNavigateComponent } from '../../hoc/WithAuthNavigate';
 import { compose } from 'redux';
 
